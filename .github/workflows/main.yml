@@ -28,11 +28,11 @@ jobs:
           gradle-version: '8.7'
 
       - name: Build Debug APK
-        working-directory: MobileAudioStudio-Android
+        working-directory: MobileAudioStudio-Android-Project/MobileAudioStudio-Android
         run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: MobileAudioStudio-debug-apk
-          path: MobileAudioStudio-Android/app/build/outputs/apk/debug/app-debug.apk
+          path: MobileAudioStudio-Android-Project/MobileAudioStudio-Android/app/build/outputs/apk/debug/app-debug.apk
